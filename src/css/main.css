@@ -1,0 +1,370 @@
+:root {
+  --main-color: #c1bdbd;
+  --background-color:#fff;
+  --after-color: #c00113;
+  --text-color:#333;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Robot',sans-serif !important;
+}
+
+section{
+  padding: 80px 0px;
+}
+header{
+  position: relative;
+}
+header .button-container{
+  margin-bottom: 70px;
+}
+header .header-content{
+  /* height: 100%; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+header .soical-media{
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  
+}
+header .soical-media li a{
+  color: #FFF !important;
+  font-size: 22px;
+}
+section#faq{
+  background-color: #202020;
+  
+}
+section .container > h2{
+  font-weight: normal !important;
+  text-transform: capitalize !important;
+}
+.faq-section h2,.register-section h2, .gallery-section h2 ,.cast-section h2 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+  .faq-section h2::after,
+  .register-section h2::after {
+    display: none;
+  }
+}
+.faq-collapse a {
+  text-decoration: none;
+}
+@media (min-width: 575px) {
+  /* .faq-collapse {
+    width: 50%;
+  } */
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.gallery-list {
+	text-align: center;
+}
+
+#gallery .container > h2{
+  margin: 30px 0px;
+}
+
+#gallery-filters{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery-list li{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 5px;
+    padding: 22px 10px;
+    min-width: 140px;
+    transition: all 0.5s ease-in-out 0s;
+    color: #333; 
+    box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.15);
+    background-color: var(--background-color);
+    cursor: pointer;
+    border-radius: 3px;
+    
+}
+
+.gallery-list li:hover ,.gallery-list li.filter-active{
+  background-color: var(--after-color);
+  color: var(--background-color);
+}
+
+
+.gallery-container {
+	display: flex;
+	width: 100%;
+  flex-wrap: wrap;
+}
+.gallery-container > div{
+  display: flex;
+}
+
+.gallery-section  {
+	overflow: hidden;
+}
+
+.gallery-section p ,.faq-section p ,.register-section p ,.cast-section p {
+	text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  /* color: var(--after-color); */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gallery-item {
+  position: relative;
+	display: block;
+	overflow: hidden;
+	border-radius: 3px;
+	margin-top: 30px;
+  opacity: 0;
+  animation: fade-in 0.8s ease-in-out forwards;
+}
+.gallery-item{
+  height: 220px;
+  width: 100%;
+}
+.gallery-item img{
+  width: 100%;
+}
+
+a{
+  cursor: pointer;
+}
+
+
+/* .gallery-item img {
+  width: 100%;
+  height: auto;
+} */
+
+.gallery-item p{
+  text-align: center;
+}
+
+section#cast{
+  background-color: #202020;
+}
+.Ourcast{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #efefef;
+}
+#cast h2{
+  color: #FFF !important;
+}
+
+.card{
+  /* background: var(--main-color); */
+  border-radius: 8px;
+  width: 312px;
+}
+.card .image-box{
+  height: 200px;
+}
+
+.card .image-box img{
+  height: 191px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; 
+}
+
+.card .profile-details{
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+
+.profile-details .name{
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+  /* color: var(--background-color); */
+}
+
+.profile-details .detail{
+  /* font-size: 12px; */
+  font-weight: 300;
+  /* color: #4d4d4d; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+
+}
+header{
+  min-height: 700px;
+  /* width: 100%; */
+  background-image: url("../image/title2.png");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  position: relative;
+}
+
+
+
+nav{
+  background-color: #000 !important;
+  box-shadow: 10px -2px 15px 7px #363636;
+  position: fixed !important;   
+  width: 100%;
+  border-radius: 0px !important;
+  z-index: 1000;
+}
+nav ul li a{
+  text-decoration: none !important;
+  /* font-size: 18px; */
+}
+nav ul li a:hover{
+  /* color: #7a010e !important; */
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-brand{
+  height: auto !important;
+}
+nav .container{
+  width: 100%;
+  flex-grow: 1 !important;
+}
+nav .nav-detail{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.register-content h3{
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.button-container {
+  display: block;
+}
+
+.button.register {
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: inherit;
+  position: relative;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  font-size: 16px !important;
+}
+
+.button--small {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+}
+
+.button--green {
+  outline: none;
+  background-color: #64d18a;
+  border-color: #64d18a;
+  color: white;
+  transition: all 200ms ease;
+}
+
+.button--green:hover {
+  background-color: #8bdda8;
+  color: white;
+}
+@media (max-width: 768px) {
+
+  .text-center {
+    text-align: center;
+  }
+}
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 50% !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+pointer-events: none;
+opacity: 0.2;
+}
+
+.panel-heading {
+  background-color: transparent !important ;
+}
+.faq-header {
+  font-family: Inter, sans-serif !important;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.panel-body {
+  font-family: Inter, sans-serif !important;
+  font-size: 16px !important;
+}
+footer{
+  padding: 10px 0px !important;
+}
+.owl-carousel .prev-slide{
+  background: url(nav-icon.png) no-repeat scroll 0 0;
+  left: 0px;
+  font-size: 30px;
+  color: #a7a7a7 !important;
+}
+.owl-carousel .next-slide{
+  background: url(nav-icon.png) no-repeat scroll -24px 0px;
+  right: 0px;
+  font-size: 30px;
+  color: #a7a7a7 !important;
+}
+.owl-carousel .prev-slide:hover{
+ background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover{
+background-position: -24px -53px;
+}   
